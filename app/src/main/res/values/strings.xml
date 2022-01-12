@@ -1,0 +1,13 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">StreamingCuba</string>
+
+    <string name="track_selection_title">Selección del track</string>
+    <string name="download_start_error">Error de descarga</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="live">LIVE</string>
+    <string name="events">EVENTOS</string>
+    <string name="visit_on">VISÍTANOS EN</string>
+    <string name="next_events">PRÓXIMOS EVENTOS</string>
+    <string name="calendar">Calendario</string>
+</resources>

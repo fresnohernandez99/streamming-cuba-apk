@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="cu.video.app.streamingcuba.ui.fragments.start.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_playerWebFragment"
+            app:destination="@id/webPlayerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_startFragment_to_fullPlayerFragment"
+            app:destination="@id/fullPlayerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_startFragment_to_exoPlayerFragment"
+            app:destination="@id/exoPlayerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webPlayerFragment"
+        android:name="cu.video.app.streamingcuba.ui.fragments.player.PlayerWebFragment"
+        android:label="fragment_player"
+        tools:layout="@layout/fragment_player_web">
+
+        <argument android:name="url" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullPlayerFragment"
+        android:name="cu.video.app.streamingcuba.ui.fragments.player.FullPlayerFragment"
+        android:label="FullPlayerFragment">
+
+        <argument android:name="url" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/liveFragment"
+        android:name="cu.video.app.streamingcuba.ui.fragments.live.LiveFragment"
+        android:label="LiveFragment" />
+    <fragment
+        android:id="@+id/upcomingFragment"
+        android:name="cu.video.app.streamingcuba.ui.fragments.upcoming.UpcomingFragment"
+        android:label="UpcomingFragment" />
+    <fragment
+        android:id="@+id/exoPlayerFragment"
+        android:name="cu.video.app.streamingcuba.ui.fragments.player.ExoPlayerFragment"
+        android:label="ExoPlayerFragment">
+
+        <argument android:name="url" />
+    </fragment>
+</navigation>
